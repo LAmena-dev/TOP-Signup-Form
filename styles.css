@@ -1,14 +1,158 @@
 /* style for signup form */
 
+:root {
+  --color-invalid: rgb(255, 0, 0);
+  --color-focus: rgb(173, 216, 230);
+  --right-bg-color: rgb(223, 224, 228);
+  --button-color: rgb(85, 137, 182);
+  --button-color-hover: rgb(59, 107, 150);
+  --shadows: rgb(0, 0, 0, 0.5);
+}
+
+@font-face {
+  font-family: "Norse Bold";
+  src: url(./font/Norse-Bold.otf);
+}
+
 body {
   display: flex;
+  min-height: 100vh;
+  height: auto;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
 }
 
 div {
   label {
     display: block;
+    margin-bottom: 5px;
   }
   input {
     display: block;
+    font-size: 1rem;
+    border: 2px solid rgb(0, 0, 0, 0.2);
+    width: 250px;
   }
+}
+
+input:required {
+  border-color: transparent;
+}
+
+input:invalid {
+  border-color: var(--color-invalid);
+}
+
+input:focus {
+  border-color: var(--color-focus);
+}
+
+button {
+  font-size: 1rem;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  height: 50px;
+  width: 150px;
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px var(--shadows);
+}
+
+button:hover {
+  background-color: var(--button-color-hover);
+  transition: all ease 200ms;
+  cursor: pointer;
+}
+
+h1,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+a {
+  color: inherit;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+  text-align: center;
+  color: white;
+
+  background-image: url(./images/sonal-gupta-GM6zI72zdos-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logoContain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  top: 200px;
+  font-family: "Norse Bold", Georgia, "Times New Roman", Times, serif;
+  background-color: var(--shadows);
+  padding: 10px;
+
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 108px;
+    font-weight: lighter;
+  }
+}
+
+.attribution {
+  display: block;
+  flex-shrink: 0;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+#mainForm {
+  padding: 30px 50px;
+  box-shadow: 0 10px 10px var(--shadows);
+  z-index: 1;
+}
+
+.info,
+.callToAction {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: var(--right-bg-color);
+  padding: 30px 50px;
+}
+
+.info {
+  justify-content: end;
+
+  h3 {
+    width: 800px;
+  }
+}
+
+.formRow {
+  display: flex;
+  gap: 50px;
+  margin: 10px 0;
 }
