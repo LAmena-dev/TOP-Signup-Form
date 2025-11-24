@@ -1,0 +1,14 @@
+/* style for signup form */
+
+body {
+  display: flex;
+}
+
+div {
+  label {
+    display: block;
+  }
+  input {
+    display: block;
+  }
+}
